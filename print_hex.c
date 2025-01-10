@@ -1,45 +1,36 @@
 #include <unistd.h>
-void put_number(int numb)
+
+void put_nbr(int num)
 {
-	char	c;
-	if (numb > 15)
-		put_number(numb / 16);
-	if (numb <= 9)
-		c = numb + '0';
-	else
-		c = numb % 16 + 'a';
-	write(1, &c, 1);
+    char hex[] = "0123456789abcdef";
+
+    if (num >= 16)
+        put_nbr(num / 16);
+    write(1, &hex[num % 16], 1);
 }
-int	main(int ac, char **av)
+
+int ft_atoi(char *str)
 {
-	int	numb;
-	int	i;
-	int	j;
+    unsigned int num = 0;
 
-	i = 0;
-	j = 0;
-	numb = 0;
+    while (*str >= '0' && *str <= '9')
+{
+	num = num * 10 + (*str - '0');
+        str++;                     
+}
 
-	if (ac == 2)
-	{
-		while (av[1][j])
-			j++;
-		j--;
-		while(av[1][j])
-		{
-			if (av[1][j]) - '0' > 9)
+return (num); 
+}
 
-		while (av[1][i])
-		{
-			numb = numb * 10 + av[1][i] - '0';
-			i++;
-		}
+int main(int argc, char **argv)
+{
+	if (argc != 2)
+    	{
+        	write(1, "\n", 1);
+      		return 0;
 	}
-	while (numb <= 15)
-	{
-		numb = num * 16 +
-	put_number(numb);
+	unsigned int num = ft_atoi(argv[1]);
+	put_nbr(num);
 	write(1, "\n", 1);
-	return (0);
+	return 0;
 }
-
