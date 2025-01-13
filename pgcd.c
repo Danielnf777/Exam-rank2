@@ -1,48 +1,34 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int	main(int ac, char **av)
 {
 	int	i;
-	int	j;
-	int	result;
+	int	num;
+	int	date;
 
-
-	
+	if (num > date)
+		i = num;
+	else
+		i = date;
 	if (ac == 3)
 	{
-		i = atoi(av[1]);
-		j = atoi(av[2]);
-		if (i > j)
+		num = atoi(av[1]);
+		date = atoi(av[2]);
+		while (i)
 		{
-			result = j;
-			while(result > 0)
+			if (num % i == 0 && date % i == 0)
 			{
-				if (i % result == 0 && j % result == 0)
-				{
-					printf("%d\n", result);
-					return (0);
-				}
-				result--;
+				printf("%d\n", i);
+				return (0);
 			}
-		}
-		else
-		{
-			result = i;
-			while(result > 0)
-			{
-				if (i % result == 0 && j % result == 0)
-				{
-					printf("%d\n", result);
-					return (0);
-				}
-				result--;
-			}
+			i--;
 		}
 	}
 	printf("\n");
 	return (0);
 }
+		
 
 
 
