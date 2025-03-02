@@ -1,49 +1,28 @@
 #include <unistd.h>
 
-int main (int argc, char **argv)
+int	main(int ac, char **av)
 {
 	int	i;
-	int	j;
-	int	l;
+	int	count;
 
 	i = 0;
-	j = 64;
-	l = 96;
-	if (argc != 2)
-		{
-			write (1, "\n", 1);
-			return (0);
-		}
-	while (argv[1][i] != '\0')
+	if (ac == 2)
 	{
-		if (argv[1][i] >= 65 && argv[1][i] <= 90)
+		while (av[1][i])
 		{
-			while (argv[1][i] > j)
-			{
-				write (1, &argv[1][i], 1);
-				j++;
-			}
-			j = 64;
-			i++;
-		}
-
-		else if (argv[1][i] >= 97 && argv[1][i] <= 122)
-		{
-			while (argv[1][i] > l)
-			{
-				write (1, &argv[1][i], 1);
-				l++;
-			}
-		l = 96;
-		i++;
-		}
-		else 
-		{
-			write(1, &argv[1][i], 1);
+			if (av[1][i] >= 'a' && av[1][i] <= 'z')
+				count = av[1][i] - 'a' + 1;
+			else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
+				count = av[1][i] - 'A' + 1;
+			else
+				count = 1;
+			while (count--)
+				write(1, &av[1][i], 1);
 			i++;
 		}
 	}
-	write (1, "\n", 1);
+	write(1, "\n", 1);
 	return (0);
 }
+
 
