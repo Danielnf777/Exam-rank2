@@ -1,28 +1,33 @@
-Assignment name  : rotone
-Expected files   : rotone.c
-Allowed functions: write
---------------------------------------------------------------------------------
+# rotone
 
-Write a program that takes a string and displays it, replacing each of its
-letters by the next one in alphabetical order.
+## Assignment Details:
+- **Assignment name**: rotone
+- **Expected files**: rotone.c
+- **Allowed functions**: write
 
-'z' becomes 'a' and 'Z' becomes 'A'. Case remains unaffected.
+---
 
-The output will be followed by a \n.
+## Description:
+Write a program that takes a string and displays it, replacing each of its letters by the next one in alphabetical order.
 
-If the number of arguments is not 1, the program displays \n.
+- 'z' becomes 'a' and 'Z' becomes 'A'. Case remains unaffected.
+- The output will be followed by a newline (`\n`).
+- If the number of arguments is not 1, the program displays a newline.
 
-Example:
+## Example Usage:
 
-$>./rotone "abc"
+```bash
+$> ./rotone "abc"
 bcd
-$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
+
+$> ./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
 Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.$
-$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
+
+$> ./rotone "AkjhZ zLKIJz , 23y " | cat -e
 BlkiA aMLJKa , 23z $
-$>./rotone | cat -e
+
+$> ./rotone | cat -e
 $
-$>
-$>./rotone "" | cat -e
+
+$> ./rotone "" | cat -e
 $
-$>
