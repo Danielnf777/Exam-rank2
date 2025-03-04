@@ -1,0 +1,31 @@
+# First Word
+
+## Assignment Details:
+- **Assignment Name**: first_word
+- **Expected Files**: first_word.c
+- **Allowed Functions**: write
+
+## Description:
+Write a program that takes a string and displays its first word, followed by a newline (\n).
+
+A word is defined as a section of the string delimited by spaces or tabs, or by the start/end of the string.
+
+If the number of parameters is not exactly 1, or if there are no words in the input, the program should simply display a newline.
+
+## Example Usage:
+```bash
+$> ./first_word "FOR PONY" | cat -e
+FOR$
+
+$> ./first_word "this        ...       is sparta, then again, maybe    not" | cat -e
+this$
+
+$> ./first_word "   " | cat -e
+$
+
+$> ./first_word "a" "b" | cat -e
+$
+
+$> ./first_word "  lorem,ipsum  " | cat -e
+lorem,ipsum$
+```
