@@ -1,0 +1,51 @@
+# 🌟 ft_putstr
+
+## 📌 Assignment Overview
+**Filename:** `ft_putstr.c`  
+**Allowed Functions:** `write`
+
+Your task is to create a function that prints a given string to the standard output. This function will iterate through the string character by character and use the `write` function to display it.
+
+## 📜 Function Prototype
+```c
+void ft_putstr(char *str);
+```
+
+## ⚙️ Implementation Details
+- The function takes a single argument: a pointer to a character string.
+- It loops through the string and prints each character one by one using `write`.
+- The loop continues until the null terminator (`\0`) is encountered.
+
+## ✨ Example Usage
+```c
+#include <unistd.h>
+
+void ft_putstr(char *str);
+
+int main() {
+    ft_putstr("Hello, World!\n");
+    return 0;
+}
+```
+**Output:**
+```
+Hello, World!
+```
+
+## 🚀 Key Takeaways
+✔ Uses only the `write` function for output.  
+✔ Handles strings properly by iterating until `\0`.  
+✔ Simple and efficient implementation.  
+
+## 📖 Learning Outcomes
+By completing this assignment, you will:
+- Gain a deeper understanding of string manipulation in C.
+- Improve your familiarity with pointer arithmetic.
+- Learn how to use the `write` function effectively.
+
+---
+💡 **Tip:** Always test your function with different string inputs, including empty strings and long strings!
+
+🎯 Happy coding! 🚀
+
+
